@@ -3,7 +3,7 @@
     src="https://github.com/devth/dec/raw/master/img/dec.png?raw=true" />
 </p>
 <p align="center">
-  <i>dec: Deep Env Conf</i>
+  <i>Deep Environmental Configuration</i>
 </p>
 
 # dec
