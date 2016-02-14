@@ -1,6 +1,6 @@
 <p align="center">
   <img width="560"
-    src="https://github.com/devth/dec/raw/master/img/dec.png?raw=true" />
+    src="https://github.com/devth/dec/raw/master/img/dec-colors.png?raw=true" />
 </p>
 <p align="center">
   <i>Deep Environmental Configuration</i>
