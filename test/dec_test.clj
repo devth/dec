@@ -39,6 +39,19 @@
 
 ;; generators
 
+(gen/sample nested-map-gen 1)
+
+({:name ""
+  :age 0
+  :nest {:foo ""}
+  :nest2 {:oz [#uuid "a07af32c-e68b-47d3-b487-181c2b158c4c" false #uuid "fd350bdd-1a04-4921-a755-a6988ba4e06d" true + -0.5 \û D]
+          :wibble true
+          :wobble n
+          :norf 1.0
+          :dec ""}
+  :email ""
+  :admin true})
+
 (def simple-except-delim-gen (gen/such-that #(not= default-delimiter %) gen/simple-type))
 (def not-nil-simple-gen (gen/such-that (complement nil?) simple-except-delim-gen))
 (def vector-alpha-numeric-gen (gen/vector gen/string-alphanumeric 1 20))
@@ -142,3 +155,13 @@
         (let [r1 ((comp (comp enflat explode) enflat) v)
               r2 ((comp enflat (comp explode enflat)) v)]
         (= r1 r2))))))
+
+(deftest non-default-delimiter
+  (testing "delimiter = ."
+    (is
+      (=
+       {:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
+       (explode {:dec.hosts.0 "a.host.com"
+                 :dec.hosts.1 "b.host.com"
+                 :dec.level "debug"}
+                :delimiter ".")))))

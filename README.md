@@ -72,6 +72,22 @@ A little simpler, without the `env`:
 {:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
 ````
 
+Environ is not required, nor is it a dependency of dec; I'm using it as an
+example of a common way to obtain environmental configuration.
+
+### Custom delimiter
+
+dec optionally takes a delimiter parameter:
+
+```clojure
+(explode {:dec.hosts.0 "a.host.com"
+          :dec.hosts.1 "b.host.com"
+          :dec.level "debug"}
+          :delimiter ".")
+
+{:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
+```
+
 ## Run tests
 
 ```
