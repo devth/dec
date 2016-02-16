@@ -1,6 +1,6 @@
 (defproject ec "1.0.0"
   :description "A tiny, pure library for encoding maps and lists in K/V config."
-  :url "http://example.com/FIXME"
+  :url "https://github.com/devth/dec"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :profiles {:dev {:dependencies [[org.clojure/test.check "0.9.0"]
