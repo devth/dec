@@ -1,0 +1,12 @@
+language: clojure
+
+script:
+  - lein test
+  - lein eastwood
+  - lein kibit
+  - lein cloverage
+
+jdk:
+  - oraclejdk8
+
+sudo: required
