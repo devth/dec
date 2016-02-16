@@ -8,24 +8,24 @@
 ;; private utilities
 
 (defn- path->key
-  "Encode a path sequential as a Clojure keyword"
+  ;; "Encode a path sequential as a Clojure keyword"
   [delimiter path]
   {:pre [(not-empty path)
          (not-empty delimiter)]}
   (keyword (s/join delimiter (map #(if (number? %) % (name %)) path))))
 
 (defn- flat? [v]
-  "Test whether a value is flat, i.e. not a collection of values."
+  ;; "Test whether a value is flat, i.e. not a collection of values."
   (not (coll? v)))
 
 (defn- ensure-min-vec-size [v size]
-  "Ensure v has at least size elements. Fill with `nil` if necessary."
+  ;; "Ensure v has at least size elements. Fill with `nil` if necessary."
   (let [d (- size (count v))]
     (if (pos? d) (into v (vec (repeat d nil))) v)))
 
 (defn- find-or-create
-  "Build up nested path with possibly-numeric indices as vectors and other keys
-   as maps"
+  ;; "Build up nested path with possibly-numeric indices as vectors and other keys
+  ;;  as maps"
   [m [k1 k2 & path]]
   (let [ds (cond-> (get-in m [k1] (if (number? k2) (vec (repeat k2 nil)) {}))
              ;; if k2 is a number we need to ensure the vector is large enough
@@ -35,13 +35,13 @@
     (update-in m [k1] (constantly ds))))
 
 (defn- update-in-idx
-  "Like clojure.core/update-in except creates vectors insated of hash-maps when
-   key is a number"
+  ;; "Like clojure.core/update-in except creates vectors insated of hash-maps when
+  ;;  key is a number"
   [m path v]
   (update-in (find-or-create m path) path (constantly v)))
 
 (defn- exploded?
-  "Determine whether a key has been fully exploded"
+  ;; "Determine whether a key has been fully exploded"
   [re-delimiter k]
   (not (re-find re-delimiter k)))
 
