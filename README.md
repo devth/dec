@@ -28,7 +28,7 @@ data structures, to wit: maps and lists.
 
 ## Usage
 
-dec primary exposes two functions: `explode` and `enflat`. They are inverses of
+dec exposes two primary functions: `explode` and `enflat`. They are inverses of
 eachother, such that `identity == (comp explode enflat)`, i.e.:
 
 ```clojure
