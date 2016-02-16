@@ -54,7 +54,7 @@ filter by a known prefix, and `explode` the results:
 ```clojure
 (require
   '[environ.core :refer [env]]
-  '[dec :as dec])
+  '[dec :refer [explode]])
 
 (explode (into {} (filter (fn [[k v]] (.startsWith (name k) "dec")) env)))
 
