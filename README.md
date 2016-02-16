@@ -45,9 +45,9 @@ export DEC_HOSTS_1=b.host.com
 export DEC_LEVEL=debug
 ```
 
-Let's say we obtain some env vars via
-[environ](https://github.com/weavejester/environ), as one does.
-Let's filter by a known prefix, then explode the results:
+Then we we obtain some env vars via
+[environ](https://github.com/weavejester/environ), as one does,
+filter by a known prefix, and `explode` the results:
 
 ```clojure
 (require
@@ -58,6 +58,17 @@ Let's filter by a known prefix, then explode the results:
 
 {:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
 ```
+
+A little simpler, without the `env`:
+
+```clojure
+(explode
+  {:dec-level "debug"
+   :dec-hosts-0 "a.host.com"
+   :dec-hosts-1 "b.host.com"})
+
+{:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
+````
 
 ## Run tests
 
