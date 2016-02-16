@@ -19,8 +19,6 @@ dec builds arbitrarily nested data structures from simple KV strings.
   [kibit](https://github.com/jonase/kibit)
 - Continuously Delivered
 
-:warning: Work in progress. :warning:
-
 ## Rationale
 
 Env vars are constrained to simple key value pairs, yet they are ubiquitous.
