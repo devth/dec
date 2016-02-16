@@ -7,6 +7,7 @@
 </p>
 
 # dec
+[![Build Status](https://travis-ci.org/devth/dec.svg?branch=master)](https://travis-ci.org/devth/dec)
 
 dec builds arbitrarily nested data structures from simple KV strings.
 
