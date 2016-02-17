@@ -19,6 +19,7 @@ dec builds arbitrarily nested data structures from simple KV strings.
 - 100% test coverage with unit tests & [test.check](https://github.com/clojure/test.check)
 - Fully linted against [eastwood](https://github.com/jonase/eastwood) &
   [kibit](https://github.com/jonase/kibit)
+- Up-to-date [Change Log](CHANGELOG.md)
 
 ## Rationale
 
