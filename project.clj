@@ -1,4 +1,4 @@
-(defproject dec "1.0.1"
+(defproject dec "1.0.2-SNAPSHOT"
   :description "A tiny, pure library for encoding maps and lists in K/V config."
   :url "https://github.com/devth/dec"
   :license {:name "Eclipse Public License"
