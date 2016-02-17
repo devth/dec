@@ -19,7 +19,6 @@ dec builds arbitrarily nested data structures from simple KV strings.
 - 100% test coverage with unit tests & [test.check](https://github.com/clojure/test.check)
 - Fully linted against [eastwood](https://github.com/jonase/eastwood) &
   [kibit](https://github.com/jonase/kibit)
-- Continuously Delivered
 
 ## Rationale
 
@@ -83,7 +82,7 @@ dec optionally takes a delimiter parameter:
 (explode {:dec.hosts.0 "a.host.com"
           :dec.hosts.1 "b.host.com"
           :dec.level "debug"}
-          :delimiter ".")
+          {:delimiter "."})
 
 {:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
 ```

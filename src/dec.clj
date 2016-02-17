@@ -49,7 +49,7 @@
 
 (defn enflat
   "Encode a nested data structure as a flat map; the inverse of explode."
-  [data-structure & {:keys [delimiter] :or {delimiter default-delimiter}}]
+  [data-structure & [{:keys [delimiter] :or {delimiter default-delimiter}}]]
   (letfn
     [(inner-flatten [d path]
        ;; sequences are paired with indexes; maps are naturally indexed by key
@@ -65,7 +65,7 @@
 
 (defn explode
   "Explode a flat map into a nested data structure; the inverse of enflat."
-  [flat-data-structure & {:keys [delimiter] :or {delimiter default-delimiter}}]
+  [flat-data-structure & [{:keys [delimiter] :or {delimiter default-delimiter}}]]
   (let [re-delimiter (re-pattern (str "\\" delimiter))]
     (reduce
       (fn [acc [k v]]

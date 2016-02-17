@@ -151,4 +151,12 @@
        (explode {:dec.hosts.0 "a.host.com"
                  :dec.hosts.1 "b.host.com"
                  :dec.level "debug"}
-                :delimiter ".")))))
+                {:delimiter "."})))
+    (is
+      (=
+       {:dec.hosts.0 "a.host.com"
+        :dec.hosts.1 "b.host.com"
+        :dec.level "debug"}
+       (enflat
+         {:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
+         {:delimiter "."})))))
