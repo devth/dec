@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="560"
+  <img width="640"
     src="https://github.com/devth/dec/raw/master/img/dec-colors.png?raw=true" />
 </p>
 <p align="center">
