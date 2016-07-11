@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :profiles {:dev {:dependencies [[org.clojure/test.check "0.9.0"]
                                   [environ "1.0.2"]]
-                   :plugins [[lein-cloverage "1.0.6"]
+                   :plugins [[lein-cloverage "1.0.7-SNAPSHOT"]
                              [jonase/eastwood "0.2.3"]
                              [lein-kibit "0.1.2"]]}}
   :dependencies [[org.clojure/clojure "1.7.0"]])
