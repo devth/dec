@@ -9,6 +9,7 @@
 # dec
 [![Build Status](https://travis-ci.org/devth/dec.svg?branch=master)](https://travis-ci.org/devth/dec)
 [![Clojars Project](https://img.shields.io/clojars/v/dec.svg)](https://clojars.org/dec)
+[![codecov](https://codecov.io/gh/devth/dec/branch/master/graph/badge.svg)](https://codecov.io/gh/devth/dec)
 
 dec builds arbitrarily nested data structures from simple KV strings.
 
