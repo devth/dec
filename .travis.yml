@@ -10,3 +10,6 @@ jdk:
   - oraclejdk8
 
 sudo: required
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
