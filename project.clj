@@ -8,4 +8,4 @@
                    :plugins [[lein-cloverage "1.0.7-SNAPSHOT"]
                              [jonase/eastwood "0.2.3"]
                              [lein-kibit "0.1.2"]]}}
-  :dependencies [[org.clojure/clojure "1.8.0"]])
+  :dependencies [[org.clojure/clojure "1.9.0"]])

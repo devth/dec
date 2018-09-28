@@ -1,5 +1,9 @@
 # dec Change Log
 
+## 1.0.2 - Unreleased
+
+- Upgrade to Clojure 1.9
+
 ## 1.0.1 - 2016-02-17
 
 ### Changed

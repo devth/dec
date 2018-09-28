@@ -160,3 +160,8 @@
        (enflat
          {:dec {:hosts ["a.host.com" "b.host.com"], :level "debug"}}
          {:delimiter "."})))))
+
+(deftest bad-env-vars
+  (explode {:dec-1234 "1"
+            })
+  )
